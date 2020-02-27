@@ -49,7 +49,7 @@
 #define DEBUGBUF_SIZE               256
 #define DEBUGBUF_BREAK              0
 
-#define DEFAULT_VMA_COUNT           64
+#define DEFAULT_VMA_COUNT           512
 
 /* System V IPC semaphore / message queue migration */
 #define MIGRATE_SYSV_SEM            0
