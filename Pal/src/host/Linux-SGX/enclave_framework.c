@@ -621,7 +621,7 @@ failed:
 
 static int register_trusted_file (const char * uri, const char * checksum_str)
 {
-    struct trusted_file * tf = NULL, * new;
+    struct trusted_file *new; // * tf = NULL, * new;
     size_t uri_len = strlen(uri);
     int ret;
 
