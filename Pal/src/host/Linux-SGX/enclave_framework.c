@@ -625,7 +625,7 @@ static int register_trusted_file (const char * uri, const char * checksum_str)
     size_t uri_len = strlen(uri);
     int ret;
 
-    spinlock_lock(&trusted_file_lock);
+/*    spinlock_lock(&trusted_file_lock);
 
     LISTP_FOR_EACH_ENTRY(tf, &trusted_file_list, list) {
         if (tf->uri_len == uri_len && !memcmp(tf->uri, uri, uri_len)) {
@@ -634,7 +634,7 @@ static int register_trusted_file (const char * uri, const char * checksum_str)
         }
     }
     spinlock_unlock(&trusted_file_lock);
-
+*/
     new = malloc(sizeof(struct trusted_file));
     if (!new)
         return -PAL_ERROR_NOMEM;
