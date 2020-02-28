@@ -36,7 +36,7 @@
 #include "enclave_pages.h"
 
 /* TODO: Having VMAs in an array is extremely inefficient */
-#define PAL_VMA_MAX (1024*16)
+#define PAL_VMA_MAX (1024*32)
 static struct pal_vma {
     void * top, * bottom;
 } pal_vmas[PAL_VMA_MAX];
