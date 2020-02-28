@@ -699,7 +699,7 @@ static int register_trusted_file (const char * uri, const char * checksum_str)
     }
 
     spinlock_lock(&trusted_file_lock);
-
+/*
     LISTP_FOR_EACH_ENTRY(tf, &trusted_file_list, list) {
         if (tf->uri_len == uri_len && !memcmp(tf->uri, uri, uri_len)) {
             spinlock_unlock(&trusted_file_lock);
@@ -707,7 +707,7 @@ static int register_trusted_file (const char * uri, const char * checksum_str)
             return 0;
         }
     }
-
+*/
     LISTP_ADD_TAIL(new, &trusted_file_list, list);
     spinlock_unlock(&trusted_file_lock);
     return 0;
