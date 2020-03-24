@@ -3,8 +3,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int ret = system("echo hello from system");
-    if(ret == -1 && ret == 127) {
+    if(system("echo hello from system")) {
         return 1;
     } else {
         return 0;
