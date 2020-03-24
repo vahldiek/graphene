@@ -78,7 +78,10 @@ manifests = \
 	multi_pthread.manifest \
 	openmp.manifest \
 	proc-path.manifest \
-	shared_object.manifest
+	shared_object.manifest \
+	echo.manifest \
+	sh.manifest \
+	system.manifest
 
 exec_target = \
 	$(c_executables) \

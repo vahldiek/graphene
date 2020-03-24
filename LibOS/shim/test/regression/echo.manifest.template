@@ -37,5 +37,3 @@ sgx.allow_file_creation = 1
 sgx.allowed_files.tmp_dir = file:tmp/
 
 sgx.thread_num = 6
-
-sgx.trusted_children.sh = file:sh.sig
