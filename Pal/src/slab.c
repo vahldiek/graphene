@@ -22,7 +22,7 @@ static PAL_LOCK g_slab_mgr_lock = LOCK_INIT;
 #define SYSTEM_LOCKED() _DkInternalIsLocked(&g_slab_mgr_lock)
 
 /* 96MB for internal data for PAL; Graphene-SGX loudly fails after this limit is depleted */
-#define POOL_SIZE 96 * 1024 * 1024
+#define POOL_SIZE 256 * 1024 * 1024
 
 static char g_mem_pool[POOL_SIZE];
 static void* g_bump = g_mem_pool;
