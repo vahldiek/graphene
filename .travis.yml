@@ -5,7 +5,7 @@ services:
     - docker
 
 install:
-    - pip instal jinja2 docker
+    - pip install jinja2 docker
 
 jobs:
   include:
