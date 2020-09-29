@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ travis ]
+    branches: [ github-workflow ]
   pull_request:
-    branches: [ travis ]
+    branches: [ github-workflow ]
 
 jobs:
 
