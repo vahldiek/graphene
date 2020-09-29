@@ -1,10 +1,10 @@
 dist: bionic
+language: python
 
 services:
     - docker
 
-before_install:
-    - apt install pip
+install:
     - pip instal jinja2 docker
 
 jobs:
