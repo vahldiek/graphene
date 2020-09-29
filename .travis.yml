@@ -5,7 +5,7 @@ services:
     - docker
 
 install:
-    - pip install jinja2 docker yaml
+    - pip install jinja2 docker pyyaml
 
 jobs:
   include:
