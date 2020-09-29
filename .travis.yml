@@ -1,0 +1,9 @@
+dist: trusty
+
+jobs:
+  include:
+    - stage: build Graphene Docker image
+      script:
+      - cd Tools/gsc
+      - make
+      - docker build -t graphenelibos/aks:latest -f images/graphene_aks.latest.dockerfile images/
