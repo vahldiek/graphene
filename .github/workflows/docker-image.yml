@@ -24,7 +24,7 @@ jobs:
     - name: Build the Docker image
       env: # Or as an environment variable
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USER }}
       run: |
         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         cd Tools/gsc
