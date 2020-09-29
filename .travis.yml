@@ -14,3 +14,4 @@ jobs:
       - cd Tools/gsc
       - make
       - docker build -t vahldiek/graphene:aks -f images/graphene_aks.latest.dockerfile images/
+      - docker push vahldiek/graphene:aks
