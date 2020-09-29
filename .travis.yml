@@ -1,9 +1,16 @@
 dist: bionic
 
+services:
+    - docker
+
+before_install:
+    - pip instal jinja2 docker
+
 jobs:
   include:
     - stage: build Graphene Docker image
       script:
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       - cd Tools/gsc
       - make
-      - docker build -t graphenelibos/aks:latest -f images/graphene_aks.latest.dockerfile images/
+      - docker build -t vahldiek/graphene:aks -f images/graphene_aks.latest.dockerfile images/
