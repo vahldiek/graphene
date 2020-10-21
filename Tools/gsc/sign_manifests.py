@@ -9,9 +9,13 @@ import subprocess
 import argparse
 
 def generate_signature(manifest):
+    executable = manifest[:manifest.rfind('.manifest')] if (
+        manifest.rfind('.manifest') != -1) else manifest
+
     sign_process = subprocess.Popen([
         '/graphene/signer/pal-sgx-sign',
         '-libpal', '/graphene/Runtime/libpal-Linux-SGX.so',
+        '-exec', executable,
         '-key', '/gsc-signer-key.pem',
         '-output', f'{manifest}.sgx',
         '-manifest', manifest

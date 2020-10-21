@@ -110,7 +110,11 @@ def main(args=None):
         print(f'\tSetting exec file to \'{binary_path}\'.')
 
         # Write final manifest file with trusted files and children
-        rendered_manifest = env.get_template(manifest).render(binary_path=binary_path)
+        rendered_manifest = env.get_template(manifest).render()
+        # New loader requires binaries to be in a single folder with the manifests.
+        # This is a temporary solution till the next loader update.
+        os.symlink(binary_path, executable)
+
         with open(manifest, 'w') as manifest_file:
             manifest_file.write('\n'.join((rendered_manifest,
                                 trusted_files,
